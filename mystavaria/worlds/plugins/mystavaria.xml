@@ -744,7 +744,7 @@ CurrentGlobalSound = PlayGlobalSound("alchemy/sip.ogg")
   omit_from_log="y"
 >
   <send>
-CurrentGlobalSound = PlayGlobalSound("alchemy/bubble4.mp3")
+CurrentGlobalSound = PlayGlobalSound("alchemy/bubble4.ogg")
   </send>
 </trigger>
 <trigger
@@ -770,7 +770,7 @@ CurrentGlobalSound = PlayGlobalSound("alchemy/mist.ogg")
   omit_from_log="y"
 >
   <send>
-CurrentGlobalSound = PlayGlobalSound("alchemy/hiss.mp3")
+CurrentGlobalSound = PlayGlobalSound("alchemy/hiss.ogg")
   </send>
 </trigger>
 <trigger
@@ -796,7 +796,7 @@ CurrentGlobalSound = PlayGlobalSound("alchemy/mist.ogg")
   omit_from_log="y"
 >
   <send>
-CurrentGlobalSound = PlayGlobalSound("alchemy/choke.mp3")
+CurrentGlobalSound = PlayGlobalSound("alchemy/choke.ogg")
   </send>
 </trigger>
 <trigger
@@ -840,7 +840,7 @@ CurrentGlobalSound = PlayGlobalSound("alchemy/explosion.ogg")
   omit_from_log="y"
 >
   <send>
-CurrentGlobalSound = PlayGlobalSound("alchemy/hiss.mp3")
+CurrentGlobalSound = PlayGlobalSound("alchemy/hiss.ogg")
   </send>
 </trigger>
 
