@@ -13,7 +13,7 @@ function OnPluginDisconnect()
   StopSound(CurrentBattleMusic)
   StopSound(CurrentAmbienceSound)
   StopSound(CurrentMusicSound)
-  CurrentGlobalSound = PlayGlobalSound("Misc/logout.mp3")
+  CurrentGlobalSound = PlayGlobalSound("Misc/logout.ogg")
   SaveConfig()
 end
 

@@ -119,7 +119,7 @@ function SaveConfig()
   if (Path.exists(Workspace.."Config.txt")) then
     Ini.write("Config.txt", ConfigTable)
   else
-    f = io.open(prometheus.core.bootstrap.Workspace.."Config.txt", "w")
+    f = io.open(mystavaria.core.bootstrap.Workspace.."Config.txt", "w")
     Ini.write("Config.txt", ConfigTable)
     f:close()
   end
