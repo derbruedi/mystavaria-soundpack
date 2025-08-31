@@ -894,6 +894,7 @@ omit_from_log="y"
   <send>SetAmbience("city")</send>
 </trigger>
 
+<"-- ambience end -->
 
 </triggers>
 
