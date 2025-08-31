@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE muclient>
+<!-- Saved on Dienstag, Juli 15, 2025, 5:11  -->
+<!-- MuClient version 5.07-pre -->
+<!-- Written by Nick Gammon -->
+<!-- Home Page: http://www.mushclient.com/ -->
+
+<!-- Plugin state saved. Plugin: "ateraan". World: "ateraan". -->
+
+<muclient>
+
+<!-- variables -->
+
+<variables
+   muclient_version="5.07-pre"
+   world_file_version="15"
+   date_saved="2025-07-15 17:11:33"
+  >
+  <variable name="mute_Ambience">0</variable>
+  <variable name="mute_BattleMusic">0</variable>
+  <variable name="mute_GlobalSound">0</variable>
+  <variable name="mute_Music">0</variable>
+  <variable name="vol_Ambience">100</variable>
+  <variable name="vol_BattleMusic">100</variable>
+  <variable name="vol_GlobalSound">100</variable>
+  <variable name="vol_Music">100</variable>
+</variables>
+</muclient>

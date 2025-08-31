@@ -1,0 +1,3 @@
+# Prevent git from pushing our state-files, they could contain personal or important data
+mystavaria/worlds/plugins/state/*.xml
+mystavaria/config.txt
