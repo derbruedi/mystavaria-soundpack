@@ -110,8 +110,8 @@ end
 MIN_DELTA = 1
 THROTTLE_MS = 0
 PAN_CURVE = "linear"
-ENEMY_SOUND = "misc/hp.ogg"
-HP_CHANGE_SOUND = "misc/hp.ogg"
+ENEMY_SOUND = "misc/hp_enemy.ogg"
+HP_CHANGE_SOUND = "misc/hp_change.ogg"
 MANA_CHANGE_SOUND = "misc/mana.ogg"
 
 -- === Hilfsfunktionen ===
