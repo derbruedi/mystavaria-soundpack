@@ -813,7 +813,7 @@ CurrentGlobalSound = PlayGlobalSound("alchemy/choke.mp3")
 <![CDATA[
   PlayGlobalSound("alchemy/electric.ogg")
   for i = 1, 10 do
-    DoAfterSpecial(i * 0.3, 'PlayGlobalSound("alchemy/vibrate.ogg")', sendto.script)
+    DoAfterSpecial(i * 0.2, 'PlayGlobalSound("alchemy/vibrate.ogg")', sendto.script)
   end
 ]]>
 </send>
