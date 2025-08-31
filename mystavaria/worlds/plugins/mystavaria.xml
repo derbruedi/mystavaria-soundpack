@@ -305,9 +305,8 @@ Execute("history_add say=%1 says, %2")
 <trigger
     enabled="y"
     group="channel"
-    match="^(.* has sent you a message.*|.* from .*)$"
+    match="* has sent you a message *"
     send_to="12"
-    regexp="y"
     sequence="100"
 >
     <send>
