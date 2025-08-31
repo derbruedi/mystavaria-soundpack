@@ -303,17 +303,18 @@ Execute("history_add say=%1 says, %2")
       </send>
     </trigger>
 <trigger
-      enabled="y"
-      group="channel"
-      match="* has sent you a message*"
-      send_to="12"
-      sequence="100"
+    enabled="y"
+    group="channel"
+    match="^(.* has sent you a message.*|.* from .*)$"
+    send_to="12"
+    regexp="y"
+    sequence="100"
 >
-      <send>
+    <send>
 CurrentGlobalSound = PlayGlobalSound("channels/tell.ogg")
 Execute("history_add Messages=%0")
-      </send>
-    </trigger>
+    </send>
+</trigger>
 <trigger
       enabled="y"
       group="channel"
