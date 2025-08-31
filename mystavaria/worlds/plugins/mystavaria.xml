@@ -640,7 +640,7 @@ CurrentGlobalSound = PlayGlobalSound("alchemy/mist.ogg")
   omit_from_log="y"
 >
   <send>
-CurrentGlobalSound = PlayGlobalSound("alchemy/finish.ogg")
+CurrentGlobalSound = PlayGlobalSound("alchemy/finish"..(math.random(1, 4))..".ogg")
   </send>
 </trigger>
 <trigger

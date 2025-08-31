@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 <!DOCTYPE muclient>
-<!-- Saved on Sonntag, August 31, 2025, 8:58  -->
+<!-- Saved on Sonntag, August 31, 2025, 10:07  -->
 <!-- MuClient version 5.06 -->
 <!-- Written by Nick Gammon -->
 <!-- Home Page: http://www.mushclient.com/ -->
@@ -8,7 +8,7 @@
 <world
    muclient_version="5.06"
    world_file_version="15"
-   date_saved="2025-08-31 08:58:16"
+   date_saved="2025-08-31 10:07:26"
 
    auto_say_override_prefix="-"
    auto_say_string="say "
@@ -20,9 +20,6 @@
    name="mystavaria"
    new_activity_sound="(No sound)"
    output_font_name="FixedSys"
-   password_base64="y"
-   password="Wm9ja2Vuem9ja2Vuem9ja2VuMDAxLQ=="
-   player="atlan"
    script_editor="notepad"
    script_editor_argument="%file"
    script_language="Lua"
@@ -42,7 +39,6 @@
    confirm_before_replacing_typing="y"
    confirm_on_paste="y"
    confirm_on_send="y"
-   connect_method="1"
    default_trigger_sequence="100"
    default_alias_sequence="100"
    detect_pueblo="y"
@@ -113,7 +109,7 @@
 <triggers
    muclient_version="5.06"
    world_file_version="15"
-   date_saved="2025-08-31 08:58:16"
+   date_saved="2025-08-31 10:07:26"
   >
   <trigger
    match="You have regained balance."
@@ -128,7 +124,7 @@
 <aliases
    muclient_version="5.06"
    world_file_version="15"
-   date_saved="2025-08-31 08:58:16"
+   date_saved="2025-08-31 10:07:26"
   >
 </aliases>
 
@@ -137,7 +133,7 @@
 <timers
    muclient_version="5.06"
    world_file_version="15"
-   date_saved="2025-08-31 08:58:16"
+   date_saved="2025-08-31 10:07:26"
   >
 </timers>
 
@@ -146,7 +142,7 @@
 <macros
    muclient_version="5.06"
    world_file_version="15"
-   date_saved="2025-08-31 08:58:16"
+   date_saved="2025-08-31 10:07:26"
   >
 
   <macro name="up" type="send_now" >
@@ -240,7 +236,7 @@
 <variables
    muclient_version="5.06"
    world_file_version="15"
-   date_saved="2025-08-31 08:58:16"
+   date_saved="2025-08-31 10:07:26"
   >
 </variables>
 
@@ -249,7 +245,7 @@
 <colours
    muclient_version="5.06"
    world_file_version="15"
-   date_saved="2025-08-31 08:58:16"
+   date_saved="2025-08-31 10:07:26"
   >
 
 <ansi>
@@ -306,7 +302,7 @@
 <keypad
    muclient_version="5.06"
    world_file_version="15"
-   date_saved="2025-08-31 08:58:16"
+   date_saved="2025-08-31 10:07:26"
   >
 
   <key name="0" >
@@ -420,7 +416,7 @@
 <printing
    muclient_version="5.06"
    world_file_version="15"
-   date_saved="2025-08-31 08:58:16"
+   date_saved="2025-08-31 10:07:26"
   >
 
 <ansi>

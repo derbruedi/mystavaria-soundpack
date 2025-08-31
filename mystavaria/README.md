@@ -1,22 +1,15 @@
-# mushclient-soundpack-launcher
-An easy-to-use launcher for any type of MUSHclient-based soundpacks
+# Soundpack for Mystavaria
 
-This launcher was created since many people without great scripting knowledge wanted to create soundpacks easily, without the need  to program very much.
-This project offers all the functions needed, including screen reader support and full audio functionalities.
-I will update regularly to keep the current MUSHclient version updated.
+Hi, this is my first soundpack.  
+It’s still small, but it will grow over time.  
+In the future, I will also replace some sounds with ones I create myself.
 
-# Getting Started
+If anyone has ideas for free sounds, feel free to email me at **audiogamer1508@gmail.com**  
+or send me an in-game message with `msg atlan <text>`.
 
-Any user who wants to create a soundpack for whatever mud needs to copy this project (or add it via git submodules) and create a world file inside the worlds folder which is called world.mcl. This file will be loaded on startup and all needed plugins will be injected automatically. Anything else (including additional plugin loading stuff) can be done inside this world file.
+To update, simply run **update.bat**.  
+If it doesn’t work, just let me know.  
+I don’t know yet how to build in proper update checking since I’m not a programmer,  
+but I’ll figure it out eventually.
 
-# Programming Advice
-
-This launcher also offers all the advanced programming functionalities you'd expect. It bundles a LuaJIT with FFI included, which enables you to access external libraries if needed.
-
-It also bundles ssl support as well as threading support, using the [llthreads library](https://github.com/Neopallium/lua-llthreads).
-
-The [penlight library](https://github.com/stevedonovan/Penlight) is included too, which extends the lua standard library with class-like tables and functionalities which enable pythonic programming, just in Lua.
-
-# Troubleshooting
-
-If some users have problems launching the MUSHclient.exe file because Windows isn't able to find some required files, advice them to install the vcredist_x86.exe and vcredist_x64.exe files which are bundled with this launcher. This should fix all problems. If this doesn't help, create an issue or contact me via email.
+Have fun playing!
