@@ -342,6 +342,7 @@ Execute("history_add day=%0")
 <!-- Channel end -->
 
 <!-- misc -->
+
 <trigger
       enabled="y"
       group="misc"
@@ -441,7 +442,31 @@ CurrentGlobalSound = PlayGlobalSound("misc/dropgold.ogg")
 CurrentGlobalSound = PlayGlobalSound("misc/get_gold.ogg")
       </send>
     </trigger>
+<trigger
+      enabled="y"
+      group="misc"
+      match="You have completed an accolade!"
+      send_to="12"
+      sequence="100"
+    >
+      <send>
+CurrentGlobalSound = PlayGlobalSound("misc/accolade.ogg")
+      </send>
+    </trigger>
+<trigger
+      enabled="y"
+      group="misc"
+      match="You gain * experience*"
+      send_to="12"
+      sequence="100"
+    >
+      <send>
+CurrentGlobalSound = PlayGlobalSound("misc/xp.ogg")
+      </send>
+    </trigger>
 
+
+<!-- misc end -->
 <!-- herbology -->
 
 <trigger
@@ -763,7 +788,7 @@ CurrentGlobalSound = PlayGlobalSound("alchemy/mist.ogg")
 <trigger
   enabled="y"
   group="alchemy"
-  match="With a sudden hiss, the mixture stills, abruptly settling into a vibrant green hue that shimmers and radiates a subtle glow."
+  match="With a sudden hiss, the mixture stills, abruptly settling into a vibrant * hue that shimmers and radiates a subtle glow."
   send_to="12"
   sequence="100"
   omit_from_output="y"
@@ -843,7 +868,73 @@ CurrentGlobalSound = PlayGlobalSound("alchemy/explosion.ogg")
 CurrentGlobalSound = PlayGlobalSound("alchemy/hiss.ogg")
   </send>
 </trigger>
+<trigger
+  enabled="y"
+  group="alchemy"
+  match="As the ingredients blend, a faint red mist envelops the potion, swirling and undulating like ethereal tendrils."
+  send_to="12"
+  sequence="100"
+  omit_from_output="y"
+  omit_from_log="y"
+>
+  <send>
+CurrentGlobalSound = PlayGlobalSound("alchemy/mist.ogg")
+  </send>
+</trigger>
+<trigger
+  enabled="y"
+  group="alchemy"
+  match="The potion emits a soft red glow as the ingredients interact, casting eerie shadows around you."
+  send_to="12"
+  sequence="100"
+  omit_from_output="y"
+  omit_from_log="y"
+>
+  <send>
+CurrentGlobalSound = PlayGlobalSound("alchemy/shadows.ogg")
+  </send>
+</trigger>
+<trigger
+  enabled="y"
+  group="alchemy"
+  match="Trembling violently, an empty * threatens to shatter as the potion's reaction grows increasingly unstable."
+  send_to="12"
+  sequence="100"
+  omit_from_output="y"
+  omit_from_log="y"
+>
+  <send>
+CurrentGlobalSound = PlayGlobalSound("alchemy/crack.ogg")
+  </send>
+</trigger>
+<trigger
+  enabled="y"
+  group="alchemy"
+  match="Tiny sparks crackle and pop upon the surface of the mixture, briefly illuminating your surroundings with flashes of blue light."
+  send_to="12"
+  sequence="100"
+  omit_from_output="y"
+  omit_from_log="y"
+>
+  <send>
+CurrentGlobalSound = PlayGlobalSound("alchemy/electric.ogg")
+  </send>
+</trigger>
+<trigger
+  enabled="y"
+  group="alchemy"
+  match="Waves of energy ripple through * casting prismatic reflections in a kaleidoscope of shifting hues."
+  send_to="12"
+  sequence="100"
+  omit_from_output="y"
+  omit_from_log="y"
+>
+  <send>
+CurrentGlobalSound = PlayGlobalSound("alchemy/electric.ogg")
+  </send>
+</trigger>
 
+<!-- alchemy end -->
 <!-- healthbar -->
 
 <trigger
