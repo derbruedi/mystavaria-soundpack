@@ -6,19 +6,12 @@ CurrentAmbienceSound = nil
 CurrentCombatMusic = nil
 CurrentMusicSound = nil
 
--- Letzte abgespielten Dateien merken
-CurrentAreaGlobalFile = nil
-CurrentAreaAmbienceFile = nil
-CurrentAreaCombatFile = nil
-CurrentAreaMusicFile = nil
-
 function PlayGlobalSound(file, pan)
   if (ConfigTable.Settings.GlobalSounds == 1) then
     pan = pan or 0
     if not Path.isabs(file) then
       file = SoundFolder .. file
     end
-    CurrentAreaGlobalFile = file
     CurrentGlobalSound = Audio.play(file, 0, pan, ConfigTable.Settings.SoundVolume)
     return CurrentGlobalSound
   end
@@ -29,7 +22,6 @@ function PlayAmbienceSound(file)
     if not Path.isabs(file) then
       file = SoundFolder .. "ambience/" .. file
     end
-    CurrentAreaAmbienceFile = file
     CurrentAmbienceSound = Audio.play(file, 1, 0, ConfigTable.Settings.AmbienceVolume)
     return CurrentAmbienceSound
   end
@@ -40,7 +32,6 @@ function PlayCombatMusic(file, pan)
     if not Path.isabs(file) then
       file = SoundFolder .. "Combatmusic/" .. file
     end
-    CurrentAreaCombatFile = file
     CurrentCombatMusic = Audio.play(file, 1, 0, ConfigTable.Settings.CombatMusicVolume)
     return CurrentCombatMusic
   end
@@ -51,7 +42,6 @@ function PlayMusicSound(file)
     if not Path.isabs(file) then
       file = SoundFolder .. "music/" .. file
     end
-    CurrentAreaMusicFile = file
     CurrentMusicSound = Audio.play(file, 1, 0, ConfigTable.Settings.MusicVolume)
     return CurrentMusicSound
   end
@@ -64,72 +54,78 @@ function StopSound(id)
 end
 
 function SetVolume(CurrentVolume)
-  local function playIfStopped(soundVar, areaFile, vol, playFunc, pan)
-    if vol <= 0 then
-      vol = 0
-      if soundVar and Audio.isPlaying(soundVar) == 1 then
-        Audio.stop(soundVar)
-      end
-      return soundVar
-    else
-      vol = math.max(1, vol) -- sicherstellen, dass min. 1
-      if soundVar and Audio.isPlaying(soundVar) == 1 then
-        Audio.setVol(vol, soundVar)
-      elseif areaFile then
-        soundVar = playFunc(areaFile, pan or 0)
-      end
-      return soundVar
-    end
-  end
-
-  -- Global Volume
-  if ConfigTable.Settings.VolumeType == 1 then
-    if ConfigTable.Settings.GlobalSounds == 1 then
+  if (ConfigTable.Settings.VolumeType == 1) then
+    -- Global Volume
+    if (ConfigTable.Settings.GlobalSounds == 1) then
       local newVol = ConfigTable.Settings.SoundVolume + CurrentVolume
-      newVol = math.min(math.max(newVol, 0), 100)
+      if newVol > 100 or newVol < 1 then
+        PlayGlobalSound("Misc/Error.ogg")
+        Execute("tts_interrupt Global sound volume must be between 1 and 100.")
+        return
+      end
       ConfigTable.Settings.SoundVolume = newVol
       PlayGlobalSound("Misc/Switch.ogg")
       Execute("tts_interrupt Global Sound Volume: " .. tostring(newVol) .. " percent.")
-      CurrentGlobalSound = playIfStopped(CurrentGlobalSound, CurrentAreaGlobalFile, newVol, PlayGlobalSound, 0)
+      if CurrentGlobalSound and Audio.isPlaying(CurrentGlobalSound) == 1 then
+        return Audio.setVol(newVol, CurrentGlobalSound)
+      end
     else
       Execute("tts_interrupt Global sounds currently disabled.")
     end
 
-  -- Ambience Volume
-  elseif ConfigTable.Settings.VolumeType == 2 then
-    if ConfigTable.Settings.AmbienceSounds == 1 then
+  elseif (ConfigTable.Settings.VolumeType == 2) then
+    -- Ambience Volume
+    if (ConfigTable.Settings.AmbienceSounds == 1) then
       local newVol = ConfigTable.Settings.AmbienceVolume + CurrentVolume
-      newVol = math.min(math.max(newVol, 0), 100)
+      if newVol > 100 or newVol < 1 then
+        PlayGlobalSound("Misc/Error.ogg")
+        Execute("tts_interrupt Ambience volume must be between 1 and 100.")
+        return
+      end
       ConfigTable.Settings.AmbienceVolume = newVol
       PlayGlobalSound("Misc/Switch.ogg")
       Execute("tts_interrupt Ambience Sound Volume: " .. tostring(newVol) .. " percent.")
-      CurrentAmbienceSound = playIfStopped(CurrentAmbienceSound, CurrentAreaAmbienceFile, newVol, PlayAmbienceSound)
+      if CurrentAmbienceSound and Audio.isPlaying(CurrentAmbienceSound) == 1 then
+        return Audio.setVol(newVol, CurrentAmbienceSound)
+      end
     else
       Execute("tts_interrupt Ambience sounds currently disabled.")
     end
 
-  -- Combat Music Volume
-  elseif ConfigTable.Settings.VolumeType == 3 then
-    if ConfigTable.Settings.CombatMusic == 1 then
+  elseif (ConfigTable.Settings.VolumeType == 3) then
+    -- Combat Music Volume
+    if (ConfigTable.Settings.CombatMusic == 1) then
       local newVol = ConfigTable.Settings.CombatVolume + CurrentVolume
-      newVol = math.min(math.max(newVol, 0), 100)
+      if newVol > 100 or newVol < 1 then
+        PlayGlobalSound("Misc/Error.ogg")
+        Execute("tts_interrupt Combat Music volume must be between 1 and 100.")
+        return
+      end
       ConfigTable.Settings.CombatVolume = newVol
       PlayGlobalSound("Misc/Switch.ogg")
       Execute("tts_interrupt Combat Music Volume: " .. tostring(newVol) .. " percent.")
-      CurrentCombatMusic = playIfStopped(CurrentCombatMusic, CurrentAreaCombatFile, newVol, PlayCombatMusic)
+      if CurrentCombatMusic and Audio.isPlaying(CurrentCombatMusic) == 1 then
+        return Audio.setVol(newVol, CurrentCombatMusic)
+      end
     else
       Execute("tts_interrupt Combat Music currently disabled.")
     end
 
-  -- Music Volume
-  elseif ConfigTable.Settings.VolumeType == 4 then
-    if ConfigTable.Settings.MusicSound == 1 then
+  elseif (ConfigTable.Settings.VolumeType == 4) then
+    -- Music Volume
+    if (ConfigTable.Settings.MusicSound == 1) then
       local newVol = ConfigTable.Settings.MusicVolume + CurrentVolume
-      newVol = math.min(math.max(newVol, 0), 100)
+      if newVol > 100 or newVol < 1 then
+        PlayGlobalSound("Misc/Error.ogg")
+        Execute("tts_interrupt Music volume must be between 1 and 100.")
+        return
+      end
       ConfigTable.Settings.MusicVolume = newVol
       PlayGlobalSound("Misc/Switch.ogg")
       Execute("tts_interrupt Music Volume: " .. tostring(newVol) .. " percent.")
-      CurrentMusicSound = playIfStopped(CurrentMusicSound, CurrentAreaMusicFile, newVol, PlayMusicSound)
+      if CurrentMusicSound and Audio.isPlaying(CurrentMusicSound) == 1 then
+        return Audio.setVol(newVol, CurrentMusicSound)
+      end
     else
       Execute("tts_interrupt Music currently disabled.")
     end

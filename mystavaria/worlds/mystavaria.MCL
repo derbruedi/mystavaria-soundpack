@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 <!DOCTYPE muclient>
-<!-- Saved on Sonntag, August 31, 2025, 10:07  -->
+<!-- Saved on Montag, September 01, 2025, 11:22  -->
 <!-- MuClient version 5.06 -->
 <!-- Written by Nick Gammon -->
 <!-- Home Page: http://www.mushclient.com/ -->
@@ -8,7 +8,7 @@
 <world
    muclient_version="5.06"
    world_file_version="15"
-   date_saved="2025-08-31 10:07:26"
+   date_saved="2025-09-01 11:22:38"
 
    auto_say_override_prefix="-"
    auto_say_string="say "
@@ -109,7 +109,7 @@
 <triggers
    muclient_version="5.06"
    world_file_version="15"
-   date_saved="2025-08-31 10:07:26"
+   date_saved="2025-09-01 11:22:38"
   >
   <trigger
    match="You have regained balance."
@@ -124,7 +124,7 @@
 <aliases
    muclient_version="5.06"
    world_file_version="15"
-   date_saved="2025-08-31 10:07:26"
+   date_saved="2025-09-01 11:22:38"
   >
 </aliases>
 
@@ -133,7 +133,7 @@
 <timers
    muclient_version="5.06"
    world_file_version="15"
-   date_saved="2025-08-31 10:07:26"
+   date_saved="2025-09-01 11:22:38"
   >
 </timers>
 
@@ -142,7 +142,7 @@
 <macros
    muclient_version="5.06"
    world_file_version="15"
-   date_saved="2025-08-31 10:07:26"
+   date_saved="2025-09-01 11:22:38"
   >
 
   <macro name="up" type="send_now" >
@@ -236,7 +236,7 @@
 <variables
    muclient_version="5.06"
    world_file_version="15"
-   date_saved="2025-08-31 10:07:26"
+   date_saved="2025-09-01 11:22:38"
   >
 </variables>
 
@@ -245,7 +245,7 @@
 <colours
    muclient_version="5.06"
    world_file_version="15"
-   date_saved="2025-08-31 10:07:26"
+   date_saved="2025-09-01 11:22:38"
   >
 
 <ansi>
@@ -302,7 +302,7 @@
 <keypad
    muclient_version="5.06"
    world_file_version="15"
-   date_saved="2025-08-31 10:07:26"
+   date_saved="2025-09-01 11:22:38"
   >
 
   <key name="0" >
@@ -416,7 +416,7 @@
 <printing
    muclient_version="5.06"
    world_file_version="15"
-   date_saved="2025-08-31 10:07:26"
+   date_saved="2025-09-01 11:22:38"
   >
 
 <ansi>
