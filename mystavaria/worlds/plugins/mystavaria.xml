@@ -207,6 +207,7 @@ end
    match="chist"
    enabled="y"
    send_to="12"
+regepx="y"
    sequence="100"
 >
   <send>channel\/history</send>
