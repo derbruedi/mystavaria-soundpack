@@ -3,10 +3,11 @@ local Path = require("pl.path")
 function OnPluginConnect()
   LoadConfig()
   if (ConfigTable.Settings.GlobalSounds == 1) then 
-    CurrentGlobalSound = PlayGlobalSound("music/connect/"..math.random(1, 5)..".ogg")
+    CurrentGlobalSound = PlayGlobalSound("music/connect/"..math.random(1,5)..".ogg")
   end
   Note("Soundpack Version "..GetVariable("version")..".")
-end
+  Note("Mystavaria-Soundpack geladen.")
+End  
 
 function OnPluginDisconnect()
   StopSound(CurrentGlobalSound)

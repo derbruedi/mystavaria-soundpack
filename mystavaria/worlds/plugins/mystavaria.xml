@@ -215,6 +215,7 @@ end
     <send>
     CurrentGlobalSound = PlayGlobalSound("channels/newbie.ogg")
     Execute("history_add newbie=%0")
+Execute("history_add all=%0")
   </send>
 </trigger>
 <trigger
@@ -227,6 +228,7 @@ end
     <send>
       CurrentGlobalSound = PlayGlobalSound("channels/public.ogg")
       Execute("history_add public=%0")
+Execute("history_add all=%0")
       </send>
 </trigger>
 <trigger
@@ -239,6 +241,7 @@ end
     <send>
       CurrentGlobalSound = PlayGlobalSound("channels/ooc.ogg")
       Execute("history_add ooctell=%0")
+Execute("history_add all=%0")
   </send>
 </trigger>
 <trigger
@@ -251,6 +254,7 @@ end
       <send>
 CurrentGlobalSound = PlayGlobalSound("channels/tell.ogg")
 Execute("history_add tell=%0")
+Execute("history_add all=%0")
       </send>
     </trigger>
 <trigger
@@ -263,6 +267,7 @@ Execute("history_add tell=%0")
       <send>
 CurrentGlobalSound = PlayGlobalSound("channels/tell.ogg")
 Execute("history_add tell=%0")
+Execute("history_add all=%0")
       </send>
     </trigger>
 <trigger
@@ -275,6 +280,7 @@ Execute("history_add tell=%0")
       <send>
 CurrentGlobalSound = PlayGlobalSound("channels/say.ogg")
 Execute("history_add say=%0")
+Execute("history_add all=%0")
       </send>
     </trigger>
 <trigger
@@ -287,6 +293,7 @@ Execute("history_add say=%0")
       <send>
 CurrentGlobalSound = PlayGlobalSound("channels/say.ogg")
 Execute("history_add say=%0")
+Execute("history_add all=%0")
       </send>
     </trigger>
 <trigger
@@ -300,6 +307,7 @@ regexp="y"
       <send>
 CurrentGlobalSound = PlayGlobalSound("channels/say.ogg")
 Execute("history_add say=%1 says, %2")
+Execute("history_add all=%1 says, %2")
       </send>
     </trigger>
 <trigger
@@ -312,6 +320,7 @@ Execute("history_add say=%1 says, %2")
     <send>
 CurrentGlobalSound = PlayGlobalSound("channels/tell.ogg")
 Execute("history_add Messages=%0")
+Execute("history_add all=%0")
     </send>
 </trigger>
 <trigger
@@ -324,6 +333,7 @@ Execute("history_add Messages=%0")
       <send>
 CurrentGlobalSound = PlayGlobalSound("channels/tell.ogg")
 Execute("history_add Messages=%0")
+Execute("history_add all=%0")
       </send>
     </trigger>
 <trigger
@@ -336,6 +346,7 @@ Execute("history_add Messages=%0")
       <send>
 CurrentGlobalSound = PlayGlobalSound("channels/day.ogg")
 Execute("history_add day=%0")
+Execute("history_add all=%0")
       </send>
     </trigger>
 

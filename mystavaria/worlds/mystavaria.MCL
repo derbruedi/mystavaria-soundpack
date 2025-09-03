@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 <!DOCTYPE muclient>
-<!-- Saved on Montag, September 01, 2025, 11:22  -->
+<!-- Saved on Dienstag, September 02, 2025, 12:26  -->
 <!-- MuClient version 5.06 -->
 <!-- Written by Nick Gammon -->
 <!-- Home Page: http://www.mushclient.com/ -->
@@ -8,7 +8,7 @@
 <world
    muclient_version="5.06"
    world_file_version="15"
-   date_saved="2025-09-01 11:22:38"
+   date_saved="2025-09-02 12:26:35"
 
    auto_say_override_prefix="-"
    auto_say_string="say "
@@ -109,14 +109,8 @@
 <triggers
    muclient_version="5.06"
    world_file_version="15"
-   date_saved="2025-09-01 11:22:38"
+   date_saved="2025-09-02 12:26:35"
   >
-  <trigger
-   match="You have regained balance."
-   sequence="100"
-  >
-  <send>prepare arcaleaf</send>
-  </trigger>
 </triggers>
 
 <!-- aliases -->
@@ -124,7 +118,7 @@
 <aliases
    muclient_version="5.06"
    world_file_version="15"
-   date_saved="2025-09-01 11:22:38"
+   date_saved="2025-09-02 12:26:35"
   >
 </aliases>
 
@@ -133,7 +127,7 @@
 <timers
    muclient_version="5.06"
    world_file_version="15"
-   date_saved="2025-09-01 11:22:38"
+   date_saved="2025-09-02 12:26:35"
   >
 </timers>
 
@@ -142,7 +136,7 @@
 <macros
    muclient_version="5.06"
    world_file_version="15"
-   date_saved="2025-09-01 11:22:38"
+   date_saved="2025-09-02 12:26:35"
   >
 
   <macro name="up" type="send_now" >
@@ -236,7 +230,7 @@
 <variables
    muclient_version="5.06"
    world_file_version="15"
-   date_saved="2025-09-01 11:22:38"
+   date_saved="2025-09-02 12:26:35"
   >
 </variables>
 
@@ -245,7 +239,7 @@
 <colours
    muclient_version="5.06"
    world_file_version="15"
-   date_saved="2025-09-01 11:22:38"
+   date_saved="2025-09-02 12:26:35"
   >
 
 <ansi>
@@ -302,7 +296,7 @@
 <keypad
    muclient_version="5.06"
    world_file_version="15"
-   date_saved="2025-09-01 11:22:38"
+   date_saved="2025-09-02 12:26:35"
   >
 
   <key name="0" >
@@ -416,7 +410,7 @@
 <printing
    muclient_version="5.06"
    world_file_version="15"
-   date_saved="2025-09-01 11:22:38"
+   date_saved="2025-09-02 12:26:35"
   >
 
 <ansi>
