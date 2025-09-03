@@ -204,7 +204,7 @@ end
 
 <aliases>
   <alias
-   match="hist"
+   match="chist"
    enabled="y"
    send_to="12"
    sequence="100"
