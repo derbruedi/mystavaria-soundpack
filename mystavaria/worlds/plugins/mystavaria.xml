@@ -202,6 +202,17 @@ end
 ]]>
 </script>
 
+<aliases
+  <alias
+   match="hist"
+   enabled="y"
+   send_to="12"
+   sequence="100"
+  >
+  <send>channel/history</send>
+  </alias>
+</aliases>
+
   <triggers>
 
 <!-- Channel -->
