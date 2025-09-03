@@ -202,7 +202,7 @@ end
 ]]>
 </script>
 
-<aliases
+<aliases>
   <alias
    match="hist"
    enabled="y"
