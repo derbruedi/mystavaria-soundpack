@@ -475,8 +475,28 @@ CurrentGlobalSound = PlayGlobalSound("misc/accolade.ogg")
 CurrentGlobalSound = PlayGlobalSound("misc/xp.ogg")
       </send>
     </trigger>
-
-
+<trigger
+      enabled="y"
+      group="misc"
+      match="You have regained equilibrium."
+      send_to="12"
+      sequence="100"
+    >
+      <send>
+CurrentGlobalSound = PlayGlobalSound("misc/equilibrium.ogg")
+      </send>
+    </trigger>
+<trigger
+      enabled="y"
+      group="misc"
+      match="You have regained balance."
+      send_to="12"
+      sequence="100"
+    >
+      <send>
+CurrentGlobalSound = PlayGlobalSound("misc/balance.ogg")
+      </send>
+    </trigger>
 <!-- misc end -->
 <!-- herbology -->
 
