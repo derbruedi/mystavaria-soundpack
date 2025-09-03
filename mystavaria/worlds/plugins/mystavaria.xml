@@ -204,14 +204,20 @@ end
 
 <aliases>
 <alias
-   match="chist"
+   match="^chist(?: (.*))?$"
+   regexp="y"
    enabled="y"
    send_to="12"
-regepx="y"
    sequence="100"
 >
-  <send>channel\/history</send>
-  </alias>
+  <send>
+    if "%1" == "" then
+      Send("channel/history")
+    else
+      Send("channel/history " .. "%1")
+    end
+  </send>
+</alias>
 </aliases>
 
   <triggers>
