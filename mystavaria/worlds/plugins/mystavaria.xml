@@ -203,13 +203,13 @@ end
 </script>
 
 <aliases>
-  <alias
+<alias
    match="chist"
    enabled="y"
    send_to="12"
    sequence="100"
-  >
-  <send>channel/history</send>
+>
+  <send>channel\/history</send>
   </alias>
 </aliases>
 
