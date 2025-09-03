@@ -7,7 +7,7 @@ function OnPluginConnect()
   end
   Note("Soundpack Version "..GetVariable("version")..".")
   Note("Mystavaria-Soundpack geladen.")
-End  
+end  
 
 function OnPluginDisconnect()
   StopSound(CurrentGlobalSound)
