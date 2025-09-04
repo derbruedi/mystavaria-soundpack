@@ -42,19 +42,18 @@ require("mystavaria.util")
 -- Tabelle mit den Ambience-Sounds
 AmbienceSounds = {
   arborvella = "arborvella.ogg",
-  praestantia = "praestantia.ogg"
-  Privia = "Privia.ogg"
-  Meliura = "Meliura.ogg"
-  Invikta = "Invikta.ogg"
-  arena = "arena.ogg"
-  tunnel = "tunnel.ogg"
-  harbour = "harbour.ogg"
-  garden = "garden.ogg"
-  hall = "hall.ogg"
-  trench = "trench"
+  praestantia = "praestantia.ogg",
+  Privia = "Privia.ogg",
+  Meliura = "Meliura.ogg",
+  Invikta = "Invikta.ogg",
+  arena = "arena.ogg",
+  tunnel = "tunnel.ogg",
+  harbour = "harbour.ogg",
+  garden = "garden.ogg",
+  hall = "hall.ogg",
+  trench = "trench.ogg",
   mages = "mages.ogg"
-  
-  }
+    }
 
 CurrentAmbienceID = nil
 CurrentAmbienceArea = nil
@@ -1063,7 +1062,7 @@ omit_from_log="y"
     send_to="12"
   sequence="100"
 >
-  <send>SetAmbience("privia")</send>
+  <send>SetAmbience("Privia")</send>
 </trigger>
 <trigger
   enabled="y"
