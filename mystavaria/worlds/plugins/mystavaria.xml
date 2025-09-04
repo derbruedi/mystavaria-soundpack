@@ -41,9 +41,20 @@ require("mystavaria.util")
 
 -- Tabelle mit den Ambience-Sounds
 AmbienceSounds = {
-  forest = "forest.ogg",
-  city   = "city.ogg"
-}
+  arborvella = "arborvella.ogg",
+  praestantia = "praestantia.ogg"
+  Privia = "Privia.ogg"
+  Meliura = "Meliura.ogg"
+  Invikta = "Invikta.ogg"
+  arena = "arena.ogg"
+  tunnel = "tunnel.ogg"
+  harbour = "harbour.ogg"
+  garden = "garden.ogg"
+  hall = "hall.ogg"
+  trench = "trench"
+  mages = "mages.ogg"
+  
+  }
 
 CurrentAmbienceID = nil
 CurrentAmbienceArea = nil
@@ -246,6 +257,19 @@ Execute("history_add all=%0")
     <send>
       CurrentGlobalSound = PlayGlobalSound("channels/public.ogg")
       Execute("history_add public=%0")
+Execute("history_add all=%0")
+      </send>
+</trigger>
+<trigger
+  enabled="y"
+  group="channel"
+  match="*[Scions]*"
+  send_to="12"
+  sequence="100"
+  >
+    <send>
+      CurrentGlobalSound = PlayGlobalSound("channels/Scions.ogg")
+      Execute("history_add Scions=%0")
 Execute("history_add all=%0")
       </send>
 </trigger>
@@ -1019,7 +1043,7 @@ omit_from_log="y"
   sequence="100"
 >
   <send>
-  SetAmbience("forest")
+  SetAmbience("arborvella")
   </send>
 </trigger>
 <trigger
@@ -1030,7 +1054,98 @@ omit_from_log="y"
     send_to="12"
   sequence="100"
 >
-  <send>SetAmbience("city")</send>
+  <send>SetAmbience("praestantia")</send>
+<trigger
+  enabled="y"
+  group="ambience"
+  match="^(Privia Centre Square|South Privia Square|First Street|The Square of Creation|West Silvergate Way|Silvergate Way|East Silvergate Way|Courtyard within The Silver Gates|The Silver Gates of Privia|Southeast of Privia Square|Privia Square East|Northeast of Privia Square|Privia Square West|Northwest of Privia Square|Southwest of Privia Square|West Midlane Way|East Midlane Way|Starlight Walk|East end of Starlight Walk|Junction by a Fountain|West end of Starlight Walk|Cobblestone Clocktower|Crescent of Dreams|Crescent of Dreams under the Branch|Turn in the Crescent of Dreams|Before the Northern Gateway of Privia|Under the Northern Gateway of Privia)$"
+  regexp="y"
+    send_to="12"
+  sequence="100"
+>
+  <send>SetAmbience("privia")</send>
+</trigger>
+<trigger
+  enabled="y"
+  group="ambience"
+  match="^(Courtyard Between the Gates of Meliura|Under the Gatehouse of Meliura|Defender's Junction|Inside Meliura's Northern Gatehouse Pavilion|Inside Meliura's Southern Gatehouse Pavilion|Defender's Walk|Defender's Crossroads|Arch of Defenders|West Meliura Plaza around a Fountain|Fountain of the Warrior|East Meliura Plaza around a Fountain|Southeast Meliura Plaza|Southwest Meliura Plaza|South Meliura Plaza around a Fountain|North Meliura Plaza around a Fountain|Arch of Nobles|Northeast Meliura Plaza|Northwest Meliura Plaza|Southern Arch of Meliura Plaza|Northern Arch of Meliura Plaza|Path of Nobles|Noble Crossroads|Path of Nobles Through the Sapphire Colonnade|Crescent of Mercy|Crescent of Altruism|Imperial Junction|Honour's Walk North of Imperial Junction|Promenade South of Imperial Junction|Northern Crossroads of Values|Varun Lane South of the Crossroads|Varun Lane|Varun Lane approaching Meliura Plaza|Crescent of Justice|Crescent of Justice near the Library|Crescent of Justice by the Clocktower|Crescent of Truth|Crescent of Truth by the Warriors Guild|Southern Crossroads of Values|Lorenz Avenue nearing Meliura Plaza|Lorenz Avenue|Lorenz Avenue North of the Crossroads|Crescent of Altruism|Crescent of Altruism Outside the Gardens|Defender's Walk|Pontus Bend South of Defender's Junction|Samson's Crest North of Defender's Junction|Varun Lane North of the Crossroads|Varun Lane|Varun Lane near the Fountain of Triumph|By the Fountain of Triumph|Samson's Crest near a Fountain|Honour's Walk near a Fountain|Honour's Walk|Bend in Honour's Walk|Bend in Honour's Walk)$"
+  regexp="y"
+    send_to="12"
+  sequence="100"
+>
+  <send>SetAmbience("Meliura")</send>
+</trigger>
+<trigger
+  enabled="y"
+  group="ambience"
+  match="^(Honour's Walk by the Arena|Arena Foyer|Outside the arena|In the arena)$"
+  regexp="y"
+    send_to="12"
+  sequence="100"
+>
+  <send>SetAmbience("arena")</send>
+</trigger>
+<trigger
+  enabled="y"
+  group="ambience"
+  match="^(Tunnel Below the Branch in Privia Square|Entrance to the Tunnel of Twilight|Tunnel of Twilight|Damp Tunnel)$"
+  regexp="y"
+    send_to="12"
+  sequence="100"
+>
+  <send>SetAmbience("tunnel")</send>
+</trigger>
+<trigger
+  enabled="y"
+  group="ambience"
+  match="^(Sapphire Colonnade Overlooking the Harbour|Sapphire Bridge over the Meliura Harbour|Southern Bridge over the Meliura Harbour|Crystal Haven Harbour|Harbour Under a Bridge|Under the Meliura Pier|Sandy Shoals of Meliura|Coastal Waterway|Meliura Cove Channel|Channel Under a Bridge|Crystal Haven Harbour|Crystal Haven Harbour by the Sapphire Baths|Harbour Under a Bridge|Sandy Shores Near Meliura|Ocean Colonnade|Docks of Praestantia)$"
+  regexp="y"
+    send_to="12"
+  sequence="100"
+>
+  <send>SetAmbience("harbour")</send>
+</trigger>
+<trigger
+  enabled="y"
+  group="ambience"
+  match="^(City Hall Gardens|Back Gate to the Gardens of Virtue|Entrance to the Gardens of Virtue|Garden Pavillion surrounded by Rose Bushes|Gardens of Virtue|Memorial Gardens|Gardens of City Hall|Cottage Gardens|Eastern Entrance to the Garden of Laminae|Arbour Path in the Garden of Laminae|The Garden of Laminae|Fountain in the Garden of Laminae|Under a Branch in the Garden of Laminae|Bough Landing in the Garden of Laminae|Back Garden of the Tavern|Garden Path|Courtyard in the Garden)$"
+  regexp="y"
+    send_to="12"
+  sequence="100"
+>
+  <send>SetAmbience("garden")</send>
+</trigger>
+<trigger
+  enabled="y"
+  group="ambience"
+  match="^(Foyer in the City Hall|City Hall|Foyer of the Praestantia City Hall|Susurrar Town Hall|Foyer of the Town Hall|Town Hall of Privia|Town Hall of Invikta|Laminae Village Hall)$"
+  regexp="y"
+    send_to="12"
+  sequence="100"
+>
+  <send>SetAmbience("hall")</send>
+</trigger>
+<trigger
+  enabled="y"
+  group="ambience"
+  match="^(Entrance to The Trench|Through The Trench|Northern Entrance of The Trench)$"
+  regexp="y"
+    send_to="12"
+  sequence="100"
+>
+  <send>SetAmbience("trench")</send>
+</trigger>
+<trigger
+  enabled="y"
+  group="ambience"
+  match="^(Within the Gatehouse of the Mages Guild|Courtyard of the Mages Guild|Entrance Hall of the Black Spire|Mage's Meeting Hall|Chamber of the Grand Mage|Within the Halls of the Black Spire|The Grand Staircase|First Floor Landing|Second Floor Landing|Third Floor Landing|Winding Staircase up the Spire|Bellroom of the Spire|Nexus of the Black Spire|The Halls of Magic|Office of the Left Hand|Office of the Right Hand|Treasure Room of the Grand Mage|Scriptorium of the Arcane)$"
+  regexp="y"
+    send_to="12"
+  sequence="100"
+>
+  <send>SetAmbience("mages")</send>
+</trigger>
+
 </trigger>
 
 <!-- ambience end -->
