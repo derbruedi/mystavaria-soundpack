@@ -236,6 +236,32 @@ end
 <trigger
   enabled="y"
   group="channel"
+  match="[meliura]]*"
+  send_to="12"
+  sequence="100"
+  >
+    <send>
+    CurrentGlobalSound = PlayGlobalSound("channels/meliura.ogg")
+    Execute("history_add meliura=%0")
+Execute("history_add all=%0")
+  </send>
+</trigger>
+<trigger
+  enabled="y"
+  group="channel"
+  match="[praestantia]*"
+  send_to="12"
+  sequence="100"
+  >
+    <send>
+    CurrentGlobalSound = PlayGlobalSound("channels/praestantia.ogg")
+    Execute("history_add praestantia=%0")
+Execute("history_add all=%0")
+  </send>
+</trigger>
+<trigger
+  enabled="y"
+  group="channel"
   match="*[Newbie]*"
   send_to="12"
   sequence="100"
@@ -497,14 +523,17 @@ CurrentGlobalSound = PlayGlobalSound("misc/get_gold.ogg")
 <trigger
       enabled="y"
       group="misc"
-      match="You have completed an accolade!"
+      match="You have completed an accolade!\|(The .* accolade has been written into your Ethos.*)"
       send_to="12"
+regexp="y"
       sequence="100"
-    >
-      <send>
+>
+  <send>
 CurrentGlobalSound = PlayGlobalSound("misc/accolade.ogg")
-      </send>
-    </trigger>
+Execute("history_add accolades=%1")
+Execute("history_add all=%1")
+  </send>
+</trigger>
 <trigger
       enabled="y"
       group="misc"
