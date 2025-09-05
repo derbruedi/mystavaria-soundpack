@@ -380,18 +380,27 @@ Execute("history_add all=%1 says, %2")
 <trigger
     enabled="y"
     group="channel"
-    match="^(?:< from|> to) (\w+): &quot;(.*)&quot;$"
-    regexp="y"
+    match="* from *: &quot;*&quot;"
     send_to="12"
     sequence="100"
 >
     <send>
 CurrentGlobalSound = PlayGlobalSound("channels/tell.ogg")
--- %1 = Richtung (< from oder > to)
--- %2 = Name
--- %3 = Nachricht
-Execute("history_add Messages=" .. "%1 " .. "%2 .. \": \" .. %3")
-Execute("history_add all=" .. "%1 " .. "%2 .. \": \" .. %3")
+Execute("history_add Messages=%0")
+Execute("history_add all=%0")
+    </send>
+</trigger>
+<trigger
+    enabled="y"
+    group="channel"
+    match="* has sent you a message *"
+    send_to="12"
+    sequence="100"
+>
+    <send>
+CurrentGlobalSound = PlayGlobalSound("channels/tell.ogg")
+Execute("history_add Messages=%0")
+Execute("history_add all=%0")
     </send>
 </trigger>
 <trigger
