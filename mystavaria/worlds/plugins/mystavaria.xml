@@ -380,14 +380,15 @@ Execute("history_add all=%1 says, %2")
 <trigger
     enabled="y"
     group="channel"
-    match="* has sent you a message *"
+    match="(?:< from|> to) *: *\"*\""
+    regexp="y"
     send_to="12"
     sequence="100"
 >
     <send>
 CurrentGlobalSound = PlayGlobalSound("channels/tell.ogg")
-Execute("history_add Messages=%0")
-Execute("history_add all=%0")
+Execute("history_add Messages=" .. "%1 " .. "%2: " .. "%3")
+Execute("history_add all=" .. "%1 " .. "%2: " .. "%3")
     </send>
 </trigger>
 <trigger
