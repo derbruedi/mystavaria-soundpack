@@ -236,7 +236,7 @@ end
 <trigger
   enabled="y"
   group="channel"
-  match="*[meliura]]*"
+  match="*[Meliura]]*"
   send_to="12"
   sequence="100"
   >
@@ -249,7 +249,7 @@ Execute("history_add all=%0")
 <trigger
   enabled="y"
   group="channel"
-  match="*[praestantia]*"
+  match="*[Praestantia]*"
   send_to="12"
   sequence="100"
   >
