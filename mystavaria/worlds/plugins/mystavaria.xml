@@ -536,15 +536,14 @@ CurrentGlobalSound = PlayGlobalSound("misc/get_gold.ogg")
 <trigger
       enabled="y"
       group="misc"
-      match="You have completed an accolade!\|(The .* accolade has been written into your Ethos.*)"
+      match="The * accolade has been written into your Ethos*"
       send_to="12"
-regexp="y"
       sequence="100"
 >
   <send>
 CurrentGlobalSound = PlayGlobalSound("misc/accolade.ogg")
-Execute("history_add accolades=%1")
-Execute("history_add all=%1")
+Execute("history_add accolades=%0")
+Execute("history_add all=%0")
   </send>
 </trigger>
 <trigger
