@@ -1089,12 +1089,13 @@ omit_from_log="y"
 <trigger
   enabled="y"
   group="ambience"
-  match="^(West end of Crimson Lane|Crimson Lane West|The Nexus of Calamity|Crimson Lane East|Nexus of Crimson and Obsidian|The Crimson Tree|Crimson Lane by King's Market|East end of Crimson Lane|The King's Market|Before the Black Spire|The Rotunda of Glory|The Ebony Path|South Praestantia Square|Centre of Praestantia Square|West Praestantia square|East Praestantia square|North Praestantia square|Northwest praestantia square|Southwest Praestantia square|Southeast Praestantia square|Northeast Praestantia square)$"
+  match="^(West end of Crimson Lane|Crimson Lane West|The Nexus of Calamity|Crimson Lane East|Nexus of Crimson and Obsidian|The Crimson Tree|Crimson Lane by King's Market|East end of Crimson Lane|The King's Market|Before the Black Spire|The Rotunda of Glory|The Ebony Path|South Praestantia Square|Centre of Praestantia Square|West Praestantia square|East Praestantia square|North Praestantia square|Northwest praestantia square|Southwest Praestantia square|Southeast Praestantia square|Northeast Praestantia square|South end of Victory's Walk|Victory's Walk|Steps of Victory|Victory's Walk|Northern end of Victory's Walk|Eastern Nexus of Miracles|Miracle's Walk|Royal's square|Western Nexus of Miracles|East end of Dome Street|Dome Street|The Dark Arches of Dome Street|Ivy Gates on Dome Street|The Pinnacle of Dome Street|The Whisper of Dome Street|Dark arches of Dome Street|West end of Dome Street|North end of Phantom's Way|North Phantom's Way|The Eclipse Cross of Phantom's Way|Corner on Phantom's Way|South end of Phantom's Way|The Nexus of Phantom's Way)$"
   regexp="y"
     send_to="12"
   sequence="100"
 >
   <send>SetAmbience("praestantia")</send>
+</trigger>
 <trigger
   enabled="y"
   group="ambience"
@@ -1108,7 +1109,7 @@ omit_from_log="y"
 <trigger
   enabled="y"
   group="ambience"
-  match="^(Courtyard Between the Gates of Meliura|Under the Gatehouse of Meliura|Defender's Junction|Inside Meliura's Northern Gatehouse Pavilion|Inside Meliura's Southern Gatehouse Pavilion|Defender's Walk|Defender's Crossroads|Arch of Defenders|West Meliura Plaza around a Fountain|Fountain of the Warrior|East Meliura Plaza around a Fountain|Southeast Meliura Plaza|Southwest Meliura Plaza|South Meliura Plaza around a Fountain|North Meliura Plaza around a Fountain|Arch of Nobles|Northeast Meliura Plaza|Northwest Meliura Plaza|Southern Arch of Meliura Plaza|Northern Arch of Meliura Plaza|Path of Nobles|Noble Crossroads|Path of Nobles Through the Sapphire Colonnade|Crescent of Mercy|Crescent of Altruism|Imperial Junction|Honour's Walk North of Imperial Junction|Promenade South of Imperial Junction|Northern Crossroads of Values|Varun Lane South of the Crossroads|Varun Lane|Varun Lane approaching Meliura Plaza|Crescent of Justice|Crescent of Justice near the Library|Crescent of Justice by the Clocktower|Crescent of Truth|Crescent of Truth by the Warriors Guild|Southern Crossroads of Values|Lorenz Avenue nearing Meliura Plaza|Lorenz Avenue|Lorenz Avenue North of the Crossroads|Crescent of Altruism|Crescent of Altruism Outside the Gardens|Defender's Walk|Pontus Bend South of Defender's Junction|Samson's Crest North of Defender's Junction|Varun Lane North of the Crossroads|Varun Lane|Varun Lane near the Fountain of Triumph|By the Fountain of Triumph|Samson's Crest near a Fountain|Honour's Walk near a Fountain|Honour's Walk|Bend in Honour's Walk|Bend in Honour's Walk)$"
+  match="^(Courtyard Between the Gates of Meliura|Under the Gatehouse of Meliura|Defender's Junction|Inside Meliura's Northern Gatehouse Pavilion|Inside Meliura's Southern Gatehouse Pavilion|Defender's Walk|Defender's Crossroads|Arch of Defenders|West Meliura Plaza around a Fountain|Fountain of the Warrior|East Meliura Plaza around a Fountain|Southeast Meliura Plaza|Southwest Meliura Plaza|South Meliura Plaza around a Fountain|North Meliura Plaza around a Fountain|Arch of Nobles|Northeast Meliura Plaza|Northwest Meliura Plaza|Southern Arch of Meliura Plaza|Northern Arch of Meliura Plaza|Path of Nobles|Noble Crossroads|Path of Nobles Through the Sapphire Colonnade|Crescent of Mercy|Crescent of Altruism|Imperial Junction|Honour's Walk North of Imperial Junction|Promenade South of Imperial Junction|Northern Crossroads of Values|Varun Lane South of the Crossroads|Varun Lane|Varun Lane approaching Meliura Plaza|Crescent of Justice|Crescent of Justice near the Library|Crescent of Justice by the Clocktower|Crescent of Truth|Crescent of Truth by the Warriors Guild|Southern Crossroads of Values|Lorenz Avenue nearing Meliura Plaza|Lorenz Avenue|Lorenz Avenue North of the Crossroads|Crescent of Altruism|Crescent of Altruism Outside the Gardens|Defender's Walk|Pontus Bend South of Defender's Junction|Samson's Crest North of Defender's Junction|Varun Lane North of the Crossroads|Varun Lane|Varun Lane near the Fountain of Triumph|By the Fountain of Triumph|Samson's Crest near a Fountain|Honour's Walk near a Fountain|Honour's Walk|Bend in Honour's Walk|Bend in Honour's Walk|Pontus Bend|Pontus Bend near a Fountain|Lorenz Avenue South of the Crossroads|Lorenz Avenue|Lorenz Avenue near the Fountain of Pontus|By the Fountain of Pontus|)$"
   regexp="y"
     send_to="12"
   sequence="100"
@@ -1138,7 +1139,7 @@ omit_from_log="y"
 <trigger
   enabled="y"
   group="ambience"
-  match="^(Sapphire Colonnade Overlooking the Harbour|Sapphire Bridge over the Meliura Harbour|Southern Bridge over the Meliura Harbour|Crystal Haven Harbour|Harbour Under a Bridge|Under the Meliura Pier|Sandy Shoals of Meliura|Coastal Waterway|Meliura Cove Channel|Channel Under a Bridge|Crystal Haven Harbour|Crystal Haven Harbour by the Sapphire Baths|Harbour Under a Bridge|Sandy Shores Near Meliura|Ocean Colonnade|Docks of Praestantia)$"
+  match="^(Sapphire Colonnade Overlooking the Harbour|Sapphire Bridge over the Meliura Harbour|Southern Bridge over the Meliura Harbour|Crystal Haven Harbour|Harbour Under a Bridge|Under the Meliura Pier|Sandy Shoals of Meliura|Coastal Waterway|Meliura Cove Channel|Channel Under a Bridge|Crystal Haven Harbour|Crystal Haven Harbour by the Sapphire Baths|Harbour Under a Bridge|Sandy Shores Near Meliura|Ocean Colonnade|Docks of Praestantia|Promenade by the Sea|Promenade Bridge over Meliura Cove Channel|Promenade by Seaside Stairs)$"
   regexp="y"
     send_to="12"
   sequence="100"
@@ -1184,8 +1185,6 @@ omit_from_log="y"
   sequence="100"
 >
   <send>SetAmbience("mages")</send>
-</trigger>
-
 </trigger>
 
 <!-- ambience end -->
