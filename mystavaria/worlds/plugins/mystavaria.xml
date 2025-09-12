@@ -536,7 +536,7 @@ CurrentGlobalSound = PlayGlobalSound("misc/get_gold.ogg")
 <trigger
       enabled="y"
       group="misc"
-      match="The * accolade has been written into your Ethos*"
+      match="*The * accolade has been written into your Ethos*"
       send_to="12"
       sequence="100"
 >
